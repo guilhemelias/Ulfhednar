@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/display_profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blackbg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linear_layout_principal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_layout_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/text_view_user_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/user_profile"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/modify_button_user_profile"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.73" />
+
+            <Button
+                android:id="@+id/modify_button_user_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_modify_profile"
+                app:layout_constraintBottom_toBottomOf="@+id/text_view_user_profile"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/text_view_user_profile"
+                app:layout_constraintTop_toTopOf="@+id/text_view_user_profile" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_layout_content_profile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#555454"
+            android:layout_marginTop="15dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraint_layout_profile">
+
+            <LinearLayout
+                android:id="@+id/linear_layout_content_sexe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/drawable_layout_profile_type"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                app:layout_constraintBottom_toTopOf="@id/linear_layout_content_age"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.517"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/text_view_sexe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sexe_text"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:layout_marginStart="10dp"/>
+
+                <TextView
+                    android:id="@+id/text_view_sexe_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_layout_content_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/drawable_layout_profile_type"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                app:layout_constraintBottom_toTopOf="@id/linear_layout_content_height"
+                app:layout_constraintEnd_toEndOf="@+id/linear_layout_content_sexe"
+                app:layout_constraintStart_toStartOf="@+id/linear_layout_content_sexe"
+                app:layout_constraintTop_toBottomOf="@+id/linear_layout_content_sexe">
+
+                <TextView
+                    android:id="@+id/text_view_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_view_age"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"/>
+
+                <TextView
+                    android:id="@+id/text_view_age_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:layout_marginStart="5dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_layout_content_height"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/drawable_layout_profile_type"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                app:layout_constraintBottom_toTopOf="@+id/linear_layout_content_weight"
+                app:layout_constraintEnd_toEndOf="@+id/linear_layout_content_age"
+                app:layout_constraintStart_toStartOf="@+id/linear_layout_content_age"
+                app:layout_constraintTop_toBottomOf="@+id/linear_layout_content_age">
+
+                <TextView
+                    android:id="@+id/text_view_height"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/height_text"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"/>
+                <TextView
+                    android:id="@+id/text_view_height_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:layout_marginStart="5dp"/>
+
+                <TextView
+                    android:id="@+id/text_view_type_height"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/type_height_text"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:layout_marginStart="5dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_layout_content_weight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/drawable_layout_profile_type"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                app:layout_constraintBottom_toTopOf="@+id/linear_layout_content_step"
+                app:layout_constraintEnd_toEndOf="@+id/linear_layout_content_height"
+                app:layout_constraintStart_toStartOf="@+id/linear_layout_content_height"
+                app:layout_constraintTop_toBottomOf="@+id/linear_layout_content_height">
+
+                <TextView
+                    android:id="@+id/text_view_weight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/weight_text"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"/>
+
+                <TextView
+                    android:id="@+id/text_view_weight_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:layout_marginStart="5dp"/>
+
+                <TextView
+                    android:id="@+id/text_view_type_weight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/type_weight_text"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:layout_marginStart="5dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_layout_content_step"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/drawable_layout_profile_type"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                app:layout_constraintBottom_toTopOf="@+id/linear_layout_content_hydratation"
+                app:layout_constraintEnd_toEndOf="@+id/linear_layout_content_weight"
+                app:layout_constraintStart_toStartOf="@+id/linear_layout_content_weight"
+                app:layout_constraintTop_toBottomOf="@+id/linear_layout_content_weight">
+
+                <TextView
+                    android:id="@+id/text_view_step"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total_step_text"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"/>
+
+                <TextView
+                    android:id="@+id/text_view_step_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:layout_marginStart="5dp"/>
+
+            </LinearLayout>
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/linear_layout_content_hydratation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/drawable_layout_profile_type"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/linear_layout_content_step"
+                app:layout_constraintStart_toStartOf="@+id/linear_layout_content_step"
+                app:layout_constraintTop_toBottomOf="@+id/linear_layout_content_step">
+
+                <TextView
+                    android:id="@+id/text_view_hydratation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total_hydratation_text"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"/>
+
+                <TextView
+                    android:id="@+id/text_view_hydratation_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginStart="5dp"
+                    app:layout_flexBasisPercent="35%"
+                    app:layout_alignSelf="flex_start"/>
+
+                <TextView
+                    android:id="@+id/text_view_type_hydratation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/type_hydratation_text"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:layout_marginStart="5dp"
+                    app:layout_flexBasisPercent="45%"/>
+
+            </com.google.android.flexbox.FlexboxLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>

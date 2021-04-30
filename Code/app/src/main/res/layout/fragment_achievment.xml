@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/display_profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3A3A3A"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linear_layout_principal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:id="@+id/constraint_layout_content_profile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#555454"
+            android:layout_marginTop="15dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingStart="15dp"
+            android:orientation="vertical"
+            android:paddingEnd="15dp"
+            app:layout_constraintTop_toBottomOf="@+id/constraint_layout_profile">
+
+
+                <TextView
+                    android:id="@+id/text_view_weight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/weight_text"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"/>
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/line_chart_weight"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="200dp"/>
+
+                <TextView
+                    android:id="@+id/text_view_height"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/height_text"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"/>
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/line_chart_height"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="200dp" />
+                <TextView
+                    android:id="@+id/text_view_step"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/step_text"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"/>
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/line_chart_step"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="200dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+
+                <TextView
+                    android:id="@+id/text_view_hydratation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/hydratation_text"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"/>
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/line_chart_hydratation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="200dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

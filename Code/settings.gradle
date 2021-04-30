@@ -1,0 +1,3 @@
+include ':Life Health'
+include ':app'
+rootProject.name = "Life Health"

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/display_profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3A3A3A"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/constraint_layout_principal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_layout_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/text_view_user_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/user_profile"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/exit_modify_button_user_profile"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.73" />
+
+            <Button
+                android:id="@+id/exit_modify_button_user_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_exit_modify_profile"
+                app:layout_constraintBottom_toBottomOf="@+id/text_view_user_profile"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/text_view_user_profile"
+                app:layout_constraintTop_toTopOf="@+id/text_view_user_profile" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_layout_content_profile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#555454"
+            android:layout_marginTop="15dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraint_layout_profile">
+
+            <LinearLayout
+                android:id="@+id/constraint_layout_content_sexe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/drawable_layout_profile_type"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                app:layout_constraintBottom_toTopOf="@id/constraint_layout_content_age"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/text_view_sexe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sexe_text"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="5dp"/>
+
+
+                <RadioGroup
+                    android:id="@+id/radio_group_sexe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radio_button_male"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/radio_text_male"
+                            android:textColor="@color/black"
+                            android:textSize="21sp"/>
+
+                        <RadioButton
+                            android:id="@+id/radio_button_female"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/radio_text_female"
+                            android:textColor="@color/black"
+                            android:textSize="21sp"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/constraint_layout_content_age"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/drawable_layout_profile_type"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                app:layout_constraintBottom_toTopOf="@id/constraint_layout_content_height"
+                app:layout_constraintEnd_toEndOf="@+id/constraint_layout_content_sexe"
+                app:layout_constraintStart_toStartOf="@+id/constraint_layout_content_sexe"
+                app:layout_constraintTop_toBottomOf="@+id/constraint_layout_content_sexe">
+
+                <TextView
+                    android:id="@+id/text_view_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_view_age"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="10dp"/>
+
+                <DatePicker
+                    android:id="@+id/date_picker_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="105dp"
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner"
+                    android:paddingBottom="10dp"
+                    android:layout_marginTop="-17dp"
+                    android:layout_marginStart="-15dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/constraint_layout_content_height"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/drawable_layout_profile_type"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                app:layout_constraintBottom_toTopOf="@+id/constraint_layout_content_weight"
+                app:layout_constraintEnd_toEndOf="@+id/constraint_layout_content_age"
+                app:layout_constraintStart_toStartOf="@+id/constraint_layout_content_age"
+                app:layout_constraintTop_toBottomOf="@+id/constraint_layout_content_age">
+
+                <TextView
+                    android:id="@+id/text_view_height"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/height_text"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:layout_marginEnd="5dp"/>
+
+                <EditText
+                    android:id="@+id/edit_text_height"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    tools:layout_editor_absoluteX="10dp" />
+
+                <TextView
+                    android:id="@+id/text_view_type_height"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/type_height_text"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/constraint_layout_content_weight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/drawable_layout_profile_type"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                app:layout_constraintBottom_toTopOf="@+id/save_profile_button"
+                app:layout_constraintEnd_toEndOf="@+id/constraint_layout_content_height"
+                app:layout_constraintStart_toStartOf="@+id/constraint_layout_content_height"
+                app:layout_constraintTop_toBottomOf="@+id/constraint_layout_content_height">
+
+                <TextView
+                    android:id="@+id/text_view_weight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/weight_text"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:layout_marginEnd="5dp"/>
+
+                <EditText
+                    android:id="@+id/edit_text_weight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    tools:layout_editor_absoluteX="10dp" />
+
+                <TextView
+                    android:id="@+id/text_view_type_weight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/type_weight_text"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/save_profile_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/constraint_layout_content_weight"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="15dp"
+                android:text="@string/save_button_text" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>
